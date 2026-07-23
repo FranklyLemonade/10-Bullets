@@ -1,27 +1,75 @@
 class_name Enemy
 extends CharacterBody2D
 
-@export var SPEED = 300.0
+
+@export var SPEED = 200.0
 @export var JUMP_VELOCITY = -400.0
 
+var can_attack = true
+
+var player: Node2D = null
+var player_detected = false
+var post: Vector2
+
+func _ready() -> void:
+	post = position
+
+
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	
+	# gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	if player_detected and is_instance_valid(player):
+		act()
+	else:
+		if abs(post.x - position.x) < 5:
+			velocity.x = 0
+		elif post.x > position.x:
+			velocity.x = SPEED/2
+		elif post.x < position.x:
+			velocity.x = SPEED/2 * -1
+	
+	move_and_slide()
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+
+func act():
+	# get position of player
+	var rel_player_pos = player.position - position
+	
+	# move towards player or attack
+	if rel_player_pos.x > 50:
+		velocity.x = SPEED
+	elif rel_player_pos.x < -50:
+		velocity.x = SPEED * -1
+	else:
+		velocity.x = 0
+		if abs(rel_player_pos.y) <= 50:
+			attack()
+	
+	# jump
+	if rel_player_pos.y < 0 and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	move_and_slide()
+func attack():
+	if !can_attack:
+		return
+	
+	if is_instance_valid(player):
+		player.die()
+		can_attack = false
 
 func die():
 	queue_free()
+
+
+func _on_viewbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		player_detected = true
+		player = body
+
+func _on_viewbox_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		player_detected = false
+		player = null

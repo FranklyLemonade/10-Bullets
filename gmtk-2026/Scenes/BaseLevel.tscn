@@ -12,11 +12,11 @@ position = Vector2(106, 525)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=624131996]
 position = Vector2(63, 551)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1637486579]
 position = Vector2(415, 10)
 shape = SubResource("RectangleShape2D_10lgy")
-metadata/_edit_group_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
 position = Vector2(478, 561)

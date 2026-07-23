@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cexf604yp2m18"]
+
+[ext_resource type="Script" uid="uid://bbinve122arhg" path="res://Enemies/Enemy.gd" id="1_iy2jk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iy2jk"]
+
+[node name="EnemyParent" type="CharacterBody2D" unique_id=308272451 groups=["Enemies"]]
+script = ExtResource("1_iy2jk")
+SPEED = null
+JUMP_VELOCITY = null
+metadata/_edit_group_ = true
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=2019124772]
+shape = SubResource("CapsuleShape2D_iy2jk")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=633141681]
+
+[node name="Viewbox" type="Area2D" parent="." unique_id=1051716623]
+
+[node name="Viewbox_hb" type="CollisionPolygon2D" parent="Viewbox" unique_id=864208269]
+polygon = PackedVector2Array(0, -8, 123, 51, 123, -68)
+
+[connection signal="body_entered" from="Viewbox" to="." method="_on_viewbox_body_entered"]
+[connection signal="body_exited" from="Viewbox" to="." method="_on_viewbox_body_exited"]

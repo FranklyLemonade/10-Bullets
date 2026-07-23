@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var bullet_count = 10
 var shoot_cd = true
 const BULLET_SCENE = preload("res://Objects/Bullet/bullet.tscn")
 
@@ -28,12 +29,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	# Code for shooting
-	if Input.is_action_just_pressed("shoot") && shoot_cd:
+	if Input.is_action_just_pressed("shoot") and shoot_cd and bullet_count > 0:
 		var bullet = BULLET_SCENE.instantiate()
 		bullet.position = position
 		bullet.direction = facing
 		get_parent().add_child(bullet)
 		cd_timer(0.5)
+		bullet_count -= 1
 
 
 func cd_timer(cd: float):

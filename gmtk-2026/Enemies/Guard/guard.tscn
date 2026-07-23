@@ -1,13 +1,5 @@
-[gd_scene format=3 uid="uid://c0yin0hsf8u4g"]
+[gd_scene format=3 uid="uid://cyl076q2w24v4"]
 
-[ext_resource type="Script" uid="uid://6ryo6cnj20hh" path="res://Enemies/Guard/guard.gd" id="1_01ix3"]
+[ext_resource type="PackedScene" uid="uid://cexf604yp2m18" path="res://Enemies/enemy_parent.tscn" id="1_opr0s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm52d"]
-
-[node name="Goon" type="CharacterBody2D" unique_id=1862041817]
-script = ExtResource("1_01ix3")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1491561156]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=149157599]
-shape = SubResource("RectangleShape2D_lm52d")
+[node name="Guard" unique_id=308272451 instance=ExtResource("1_opr0s")]

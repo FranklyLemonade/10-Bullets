@@ -19,4 +19,8 @@ func screen_exited() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemies"):
-		body.take_damage()
+		body.die()
+		queue_free()
+	if body.is_in_group("Breakables"):
+		body.break()
+		queue_free()

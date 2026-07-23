@@ -1,13 +1,7 @@
-[gd_scene format=3 uid="uid://d3718y3uamuoh"]
+[gd_scene format=3 uid="uid://ds2uu8ysa26f"]
 
-[ext_resource type="Script" uid="uid://2h3m1hs8b2mg" path="res://Enemies/Boss/boss.gd" id="1_itqpf"]
+[ext_resource type="PackedScene" uid="uid://cexf604yp2m18" path="res://Enemies/enemy_parent.tscn" id="1_itqpf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1brnh"]
-
-[node name="Boss" type="CharacterBody2D" unique_id=1969023252 groups=["Enemies"]]
-script = ExtResource("1_itqpf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1272301438]
-shape = SubResource("RectangleShape2D_1brnh")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1781455564]
+[node name="Boss" unique_id=308272451 instance=ExtResource("1_itqpf")]
+SPEED = 0.0
+JUMP_VELOCITY = 0.0
