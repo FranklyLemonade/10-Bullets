@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bpe1un0dku24x"]
+
+[ext_resource type="Texture2D" uid="uid://dp50rrfoda6p7" path="res://Player/Sprites/PlayerTest.png" id="1_f75uf"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f75uf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

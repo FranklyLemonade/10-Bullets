@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://cr3l7x8g53tq4"]
 
 [ext_resource type="Script" uid="uid://oownsje07u4a" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="SpriteFrames" uid="uid://bpe1un0dku24x" path="res://Player/Sprites/player_sprites.tres" id="2_4ntmi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=944203250]
 script = ExtResource("1_l8h54")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=876424215]
+sprite_frames = ExtResource("2_4ntmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2093151511]
+shape = SubResource("CapsuleShape2D_4ntmi")
