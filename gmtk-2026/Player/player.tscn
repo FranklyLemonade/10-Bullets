@@ -1,22 +1,26 @@
-[gd_scene format=3 uid="uid://cr3l7x8g53tq4"]
+[gd_scene format=3 uid="uid://cx5ghr7oecywv"]
 
-[ext_resource type="PackedScene" uid="uid://cr3l7x8g53tq4" path="res://Player/player.tscn" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://oownsje07u4a" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="SpriteFrames" uid="uid://bpe1un0dku24x" path="res://Player/Sprites/player_sprites.tres" id="2_btcbx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_10lgy"]
-size = Vector2(830, 20)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
+radius = 12.0
+height = 34.0
 
-[node name="Node2D" type="Node2D" unique_id=2113682009]
-
-[node name="CharacterBody2D" parent="." unique_id=944203250 instance=ExtResource("1_l8h54")]
-position = Vector2(106, 525)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=624131996]
-position = Vector2(63, 551)
+[node name="Player" type="CharacterBody2D" unique_id=1631301973]
+script = ExtResource("1_4ntmi")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1637486579]
-position = Vector2(415, 10)
-shape = SubResource("RectangleShape2D_10lgy")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=585145427]
+shape = SubResource("CapsuleShape2D_gwnis")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
-position = Vector2(478, 561)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1995445863]
+sprite_frames = ExtResource("2_btcbx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1088197784]
+zoom = Vector2(2, 2)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

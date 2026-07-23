@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://cbtt0oh6e1uw2"]
 
-[ext_resource type="PackedScene" uid="uid://cr3l7x8g53tq4" path="res://Player/player.tscn" id="1_uiqps"]
+[ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="1_uiqps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10lgy"]
 size = Vector2(830, 20)
 
 [node name="Node2D" type="Node2D" unique_id=2113682009]
-
-[node name="CharacterBody2D" parent="." unique_id=944203250 instance=ExtResource("1_uiqps")]
-position = Vector2(106, 525)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=624131996]
 position = Vector2(63, 551)
@@ -20,3 +17,6 @@ shape = SubResource("RectangleShape2D_10lgy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
 position = Vector2(478, 561)
+
+[node name="Player" parent="." unique_id=1631301973 instance=ExtResource("1_uiqps")]
+position = Vector2(81.79839, 487.97534)
