@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://cbtt0oh6e1uw2"]
 
-[ext_resource type="PackedScene" uid="uid://cr3l7x8g53tq4" path="res://Player/player.tscn" id="1_lc1oi"]
+[ext_resource type="PackedScene" uid="uid://cr3l7x8g53tq4" path="res://Player/player.tscn" id="1_uiqps"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8od7v"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qc4db"]
-distance = -74.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10lgy"]
+size = Vector2(830, 20)
 
 [node name="Node2D" type="Node2D" unique_id=2113682009]
 
-[node name="CharacterBody2D" parent="." unique_id=944203250 instance=ExtResource("1_lc1oi")]
+[node name="CharacterBody2D" parent="." unique_id=944203250 instance=ExtResource("1_uiqps")]
 position = Vector2(106, 525)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=624131996]
-position = Vector2(55, 556)
-physics_material_override = SubResource("PhysicsMaterial_8od7v")
+position = Vector2(63, 551)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1637486579]
-position = Vector2(42, -51)
-shape = SubResource("WorldBoundaryShape2D_qc4db")
+position = Vector2(415, 10)
+shape = SubResource("RectangleShape2D_10lgy")
+metadata/_edit_group_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
+position = Vector2(478, 561)

@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
-var hp = 3
+var shoot_cd = true
+const BULLET_SCENE = preload("res://Objects/Bullet/bullet.tscn")
 
+var facing = 1
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -19,8 +22,21 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
+		facing = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 	
-	
+	# Code for shooting
+	if Input.is_action_just_pressed("shoot") && shoot_cd:
+		var bullet = BULLET_SCENE.instantiate()
+		bullet.position = position
+		bullet.direction = facing
+		get_parent().add_child(bullet)
+		cd_timer(0.5)
+
+
+func cd_timer(cd: float):
+	shoot_cd = false
+	await get_tree().create_timer(cd).timeout
+	shoot_cd = true
