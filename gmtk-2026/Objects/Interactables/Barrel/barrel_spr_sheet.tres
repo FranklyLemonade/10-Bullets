@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c1vogqmv6rlbk"]
+
+[ext_resource type="Texture2D" uid="uid://mtyo34edwph8" path="res://Objects/Interactables/Barrel/barrel_spr.png" id="1_5egxe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymvm4"]
+atlas = ExtResource("1_5egxe")
+region = Rect2(416, 8, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f03ce"]
+atlas = ExtResource("1_5egxe")
+region = Rect2(800, 8, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed8jo"]
+atlas = ExtResource("1_5egxe")
+region = Rect2(1184, 8, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cr61"]
+atlas = ExtResource("1_5egxe")
+region = Rect2(32, 8, 96, 96)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymvm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f03ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed8jo")
+}],
+"loop": true,
+"name": &"burn",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cr61")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

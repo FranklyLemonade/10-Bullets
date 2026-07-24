@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="2_0yhfe"]
 [ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="3_6qoed"]
 [ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="4_ln6xy"]
-[ext_resource type="PackedScene" uid="uid://uc4nia4x5ws5" path="res://Objects/Interactables/Box/Box.tscn" id="6_6qoed"]
+[ext_resource type="PackedScene" uid="uid://uc4nia4x5ws5" path="res://Objects/Interactables/Box/box.tscn" id="6_6qoed"]
+[ext_resource type="Texture2D" uid="uid://cqb21p2phe4wg" path="res://Backgrounds/LevelBG.png" id="7_ln6xy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
 texture = ExtResource("1_7p43g")
@@ -43,5 +44,13 @@ position = Vector2(827, 526)
 unique_name_in_owner = true
 
 [node name="Box" parent="." unique_id=329239634 instance=ExtResource("6_6qoed")]
-position = Vector2(510.31915, 476.63626)
-mass = 1.0
+position = Vector2(510.31915, 512.6362)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1776177067]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1888711680]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1787388283]
+scale = Vector2(4, 4)
+texture = ExtResource("7_ln6xy")
+centered = false

@@ -9,7 +9,7 @@ size = Vector2(96, 96)
 [node name="Box" type="RigidBody2D" unique_id=329239634 groups=["Breakables"]]
 script = ExtResource("1_5imwm")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=2126279525]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2126279525]
 sprite_frames = ExtResource("2_u2dkf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1100354495]
