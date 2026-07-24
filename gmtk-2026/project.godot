@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GMTK2026"
-run/main_scene="uid://cbtt0oh6e1uw2"
+run/main_scene="uid://5ltsw57ro33s"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Other/icon.svg"
 

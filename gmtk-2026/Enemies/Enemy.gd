@@ -32,9 +32,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = sign(dist) * SPEED / 2
 	if velocity.x <= 0:
-		scale.x = 1
+		transform.x.x = 1
 	elif velocity.x > 0:
-		scale.x = -1
+		transform.x.x = -1
 	
 	move_and_slide()
 
@@ -75,10 +75,8 @@ func _on_viewbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player_detected = true
 		player = body
-		print("player detected")
 
 func _on_viewbox_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player_detected = false
 		player = null
-		print("player exited")

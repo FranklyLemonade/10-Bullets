@@ -11,3 +11,4 @@ position = Vector2(1, 0)
 [node name="Animator" parent="." index="1" unique_id=633141681]
 sprite_frames = ExtResource("2_lm52d")
 animation = &"idle"
+frame_progress = 0.08086407
