@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="4_ln6xy"]
 [ext_resource type="PackedScene" uid="uid://uc4nia4x5ws5" path="res://Objects/Interactables/Box/box.tscn" id="6_6qoed"]
 [ext_resource type="Texture2D" uid="uid://cqb21p2phe4wg" path="res://Backgrounds/LevelBG.png" id="7_ln6xy"]
+[ext_resource type="PackedScene" uid="uid://c58pmn88wggi2" path="res://Objects/Interactables/Barrel/barrel.tscn" id="8_iyjcb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
 texture = ExtResource("1_7p43g")
@@ -28,6 +29,15 @@ sources/0 = SubResource("TileSetAtlasSource_1i3bd")
 [node name="Node2D" type="Node2D" unique_id=2113682009]
 script = ExtResource("1_0yhfe")
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1776177067]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1888711680]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1787388283]
+scale = Vector2(4, 4)
+texture = ExtResource("7_ln6xy")
+centered = false
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
 position = Vector2(478, 561)
 tile_map_data = PackedByteArray("AAD8/wAAAAACAAAAAAD9/wAAAAACAAAAAAD+/wAAAAACAAAAAAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAADAAAAAAACAAAAAAD7/wAAAAACAAAAAAD7////AAABAAAAAAD7//7/AAABAAAAAAD7//3/AAABAAAAAAD7//z/AAABAAAAAAD7//v/AAABAAAAAAAEAPv/AAABAAAAAAAEAPz/AAABAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAEAAAAAAACAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAA=")
@@ -38,19 +48,13 @@ unique_name_in_owner = true
 position = Vector2(134, 543)
 
 [node name="Guard" parent="." unique_id=308272451 instance=ExtResource("3_6qoed")]
-position = Vector2(827, 526)
+position = Vector2(802, 525)
 
 [node name="PlayerHud" parent="." unique_id=1014316994 instance=ExtResource("4_ln6xy")]
 unique_name_in_owner = true
 
 [node name="Box" parent="." unique_id=329239634 instance=ExtResource("6_6qoed")]
-position = Vector2(510.31915, 512.6362)
+position = Vector2(733, 510)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1776177067]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1888711680]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1787388283]
-scale = Vector2(4, 4)
-texture = ExtResource("7_ln6xy")
-centered = false
+[node name="Barrel" parent="." unique_id=374753265 instance=ExtResource("8_iyjcb")]
+position = Vector2(634, 512)

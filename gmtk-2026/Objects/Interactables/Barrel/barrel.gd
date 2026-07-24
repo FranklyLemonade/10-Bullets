@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+const EXPLOSION_SCN = preload("res://Objects/Explosion/explosion.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,4 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _break():
+	var explosion = EXPLOSION_SCN.instantiate()
+	explosion.global_position = position
+	get_tree().current_scene.add_child(explosion)
 	queue_free()

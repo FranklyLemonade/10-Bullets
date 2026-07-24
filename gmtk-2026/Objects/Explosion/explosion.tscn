@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b2exkob038ko2" path="res://Objects/Explosion/explosion_spr_sheet.tres" id="2_mxxmh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hyod8"]
+radius = 98.005104
 
 [node name="Explosion" type="Area2D" unique_id=582861519]
 script = ExtResource("1_1ylfm")
