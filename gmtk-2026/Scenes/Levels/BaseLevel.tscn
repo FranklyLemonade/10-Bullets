@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="2_0yhfe"]
 [ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="3_6qoed"]
 [ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="4_ln6xy"]
+[ext_resource type="PackedScene" uid="uid://uc4nia4x5ws5" path="res://Objects/Interactables/Box/Box.tscn" id="6_6qoed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
 texture = ExtResource("1_7p43g")
@@ -33,10 +34,14 @@ tile_set = SubResource("TileSet_oor6l")
 
 [node name="Player" parent="." unique_id=1631301973 groups=["Player"] instance=ExtResource("2_0yhfe")]
 unique_name_in_owner = true
-position = Vector2(132, 538)
+position = Vector2(134, 543)
 
 [node name="Guard" parent="." unique_id=308272451 instance=ExtResource("3_6qoed")]
-position = Vector2(765, 490)
+position = Vector2(827, 526)
 
 [node name="PlayerHud" parent="." unique_id=1014316994 instance=ExtResource("4_ln6xy")]
 unique_name_in_owner = true
+
+[node name="Box" parent="." unique_id=329239634 instance=ExtResource("6_6qoed")]
+position = Vector2(510.31915, 476.63626)
+mass = 1.0

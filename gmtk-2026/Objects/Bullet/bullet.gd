@@ -22,5 +22,5 @@ func _on_body_entered(body: Node2D) -> void:
 		body.die()
 		queue_free()
 	if body.is_in_group("Breakables"):
-		body.break()
+		body._break()
 		queue_free()

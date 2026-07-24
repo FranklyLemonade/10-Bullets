@@ -7,6 +7,7 @@ const BULLET_SCENE = preload("res://Objects/Bullet/bullet.tscn")
 var facing = 1
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+const PUSH_FORCE = 50.0
 
 signal bullet_used
 
@@ -38,6 +39,14 @@ func _physics_process(delta: float) -> void:
 		cd_timer(0.5)
 		bullet_count -= 1
 		bullet_used.emit()
+	
+	# Applying force
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is RigidBody2D:
+			var push_direction = -collision.get_normal()
+			collider.apply_central_impulse(push_direction * PUSH_FORCE)
 
 
 func cd_timer(cd: float):

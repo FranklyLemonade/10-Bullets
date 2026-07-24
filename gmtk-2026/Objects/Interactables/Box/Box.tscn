@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://uc4nia4x5ws5"]
+
+[ext_resource type="Script" uid="uid://g6uo5do1phwy" path="res://Objects/Interactables/Box/box.gd" id="1_5imwm"]
+[ext_resource type="SpriteFrames" uid="uid://cjw48abiawmb1" path="res://Objects/Interactables/Box/box_spr_sheet.tres" id="2_u2dkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti2h3"]
+size = Vector2(96, 96)
+
+[node name="Box" type="RigidBody2D" unique_id=329239634 groups=["Breakables"]]
+script = ExtResource("1_5imwm")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=2126279525]
+sprite_frames = ExtResource("2_u2dkf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1100354495]
+shape = SubResource("RectangleShape2D_ti2h3")
