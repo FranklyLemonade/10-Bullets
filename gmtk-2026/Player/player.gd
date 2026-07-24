@@ -8,6 +8,7 @@ var facing = 1
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+signal bullet_used
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -36,6 +37,7 @@ func _physics_process(delta: float) -> void:
 		get_parent().add_child(bullet)
 		cd_timer(0.5)
 		bullet_count -= 1
+		bullet_used.emit()
 
 
 func cd_timer(cd: float):

@@ -1,11 +1,13 @@
 [gd_scene format=4 uid="uid://cbtt0oh6e1uw2"]
 
-[ext_resource type="Texture2D" uid="uid://kgntiwt2jai5" path="res://Tilesets/StructureTileset.png" id="1_bq707"]
-[ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="1_uiqps"]
-[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="2_10lgy"]
+[ext_resource type="Script" uid="uid://drkjlc63jsb3o" path="res://Scenes/Levels/base_level.gd" id="1_0yhfe"]
+[ext_resource type="Texture2D" uid="uid://kgntiwt2jai5" path="res://Tilesets/StructureTileset.png" id="1_7p43g"]
+[ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="2_0yhfe"]
+[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="3_6qoed"]
+[ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="4_ln6xy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
-texture = ExtResource("1_bq707")
+texture = ExtResource("1_7p43g")
 margins = Vector2i(24, 8)
 separation = Vector2i(16, 0)
 texture_region_size = Vector2i(96, 96)
@@ -22,14 +24,19 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1i3bd")
 
 [node name="Node2D" type="Node2D" unique_id=2113682009]
+script = ExtResource("1_0yhfe")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
 position = Vector2(478, 561)
 tile_map_data = PackedByteArray("AAD8/wAAAAACAAAAAAD9/wAAAAACAAAAAAD+/wAAAAACAAAAAAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAADAAAAAAACAAAAAAD7/wAAAAACAAAAAAD7////AAABAAAAAAD7//7/AAABAAAAAAD7//3/AAABAAAAAAD7//z/AAABAAAAAAD7//v/AAABAAAAAAAEAPv/AAABAAAAAAAEAPz/AAABAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAEAAAAAAACAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_oor6l")
 
-[node name="Player" parent="." unique_id=1631301973 groups=["Player"] instance=ExtResource("1_uiqps")]
+[node name="Player" parent="." unique_id=1631301973 groups=["Player"] instance=ExtResource("2_0yhfe")]
+unique_name_in_owner = true
 position = Vector2(132, 538)
 
-[node name="Guard" parent="." unique_id=308272451 instance=ExtResource("2_10lgy")]
+[node name="Guard" parent="." unique_id=308272451 instance=ExtResource("3_6qoed")]
 position = Vector2(765, 490)
+
+[node name="PlayerHud" parent="." unique_id=1014316994 instance=ExtResource("4_ln6xy")]
+unique_name_in_owner = true

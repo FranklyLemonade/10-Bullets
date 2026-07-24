@@ -18,7 +18,6 @@ shape = SubResource("CapsuleShape2D_gwnis")
 sprite_frames = ExtResource("2_btcbx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1088197784]
-enabled = false
 zoom = Vector2(2, 2)
 process_callback = 0
 position_smoothing_enabled = true

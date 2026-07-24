@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bb34dd8mluwxo"]
+
+[ext_resource type="Script" uid="uid://vtelyfwrscuj" path="res://Player/HUD/player_hud.gd" id="1_v7kxa"]
+[ext_resource type="Texture2D" uid="uid://djfap12ymv3gt" path="res://Player/Sprites/bullet.png" id="1_y27wg"]
+
+[node name="PlayerHud" type="CanvasLayer" unique_id=1014316994]
+script = ExtResource("1_v7kxa")
+
+[node name="Control" type="Control" parent="." unique_id=1615430967]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BulletContainer" type="VBoxContainer" parent="Control" unique_id=1624075140]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -241.0
+offset_right = 57.0
+offset_bottom = -5.0
+grow_vertical = 0
+alignment = 2
+
+[node name="Bullet0" type="TextureRect" parent="Control/BulletContainer" unique_id=1260293409]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet1" type="TextureRect" parent="Control/BulletContainer" unique_id=1573872728]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet2" type="TextureRect" parent="Control/BulletContainer" unique_id=791310593]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet3" type="TextureRect" parent="Control/BulletContainer" unique_id=1600328403]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet4" type="TextureRect" parent="Control/BulletContainer" unique_id=967841511]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet5" type="TextureRect" parent="Control/BulletContainer" unique_id=705668635]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet6" type="TextureRect" parent="Control/BulletContainer" unique_id=984079893]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet7" type="TextureRect" parent="Control/BulletContainer" unique_id=1250184516]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet8" type="TextureRect" parent="Control/BulletContainer" unique_id=684740747]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bullet9" type="TextureRect" parent="Control/BulletContainer" unique_id=471294378]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("1_y27wg")
+expand_mode = 1
+stretch_mode = 5

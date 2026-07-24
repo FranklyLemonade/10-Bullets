@@ -32,6 +32,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "1"
+horizontal_alignment = 1
 
 [node name="Level1" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1862478874]
 layout_mode = 2
@@ -41,6 +42,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "2"
+horizontal_alignment = 1
 
 [node name="Level2" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=267315242]
 layout_mode = 2
@@ -50,6 +52,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "3"
+horizontal_alignment = 1
 
 [node name="Level3" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=54064893]
 layout_mode = 2
@@ -59,6 +62,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "4"
+horizontal_alignment = 1
 
 [node name="Level4" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1413219743]
 layout_mode = 2
@@ -68,6 +72,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "5"
+horizontal_alignment = 1
 
 [node name="Level5" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=659155214]
 layout_mode = 2
@@ -77,6 +82,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "6"
+horizontal_alignment = 1
 
 [node name="Level6" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=2005659327]
 layout_mode = 2
@@ -86,6 +92,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "7"
+horizontal_alignment = 1
 
 [node name="Level7" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1017129031]
 layout_mode = 2
@@ -95,6 +102,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "8"
+horizontal_alignment = 1
 
 [node name="Level8" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=2010999407]
 layout_mode = 2
@@ -104,6 +112,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "9"
+horizontal_alignment = 1
 
 [node name="Level9" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1387164489]
 layout_mode = 2
@@ -113,3 +122,4 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "10"
+horizontal_alignment = 1
