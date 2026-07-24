@@ -42,3 +42,6 @@ func cd_timer(cd: float):
 	shoot_cd = false
 	await get_tree().create_timer(cd).timeout
 	shoot_cd = true
+
+func die():
+	get_tree().reload_current_scene()

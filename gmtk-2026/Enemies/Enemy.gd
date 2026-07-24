@@ -1,7 +1,6 @@
 class_name Enemy
 extends CharacterBody2D
 
-
 @export var SPEED = 200.0
 @export var JUMP_VELOCITY = -400.0
 
@@ -11,25 +10,30 @@ var player: Node2D = null
 var player_detected = false
 var post: Vector2
 
+@onready var animator = %Animator
+
 func _ready() -> void:
 	post = position
-
+	animator.play("idle")
 
 func _physics_process(delta: float) -> void:
-	
 	# gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
 	if player_detected and is_instance_valid(player):
 		act()
+		
 	else:
 		if abs(post.x - position.x) < 5:
 			velocity.x = 0
+			animator.play("idle")
 		elif post.x > position.x:
 			velocity.x = SPEED/2
+			animator.play("run")
 		elif post.x < position.x:
 			velocity.x = SPEED/2 * -1
+			animator.play("run")
 	
 	move_and_slide()
 
@@ -57,6 +61,7 @@ func attack():
 		return
 	
 	if is_instance_valid(player):
+		animator.play("punch")
 		player.die()
 		can_attack = false
 

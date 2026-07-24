@@ -1,22 +1,38 @@
-[gd_scene format=3 uid="uid://cbtt0oh6e1uw2"]
+[gd_scene format=4 uid="uid://cbtt0oh6e1uw2"]
 
+[ext_resource type="Texture2D" uid="uid://kgntiwt2jai5" path="res://Tilesets/StructureTileset.png" id="1_bq707"]
 [ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="1_uiqps"]
+[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="2_10lgy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_10lgy"]
-size = Vector2(830, 20)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
+texture = ExtResource("1_bq707")
+margins = Vector2i(24, 8)
+separation = Vector2i(16, 0)
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -48, 48, -48, 48, 48, -48, 48)
+
+[sub_resource type="TileSet" id="TileSet_oor6l"]
+tile_size = Vector2i(96, 96)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1i3bd")
 
 [node name="Node2D" type="Node2D" unique_id=2113682009]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=624131996]
-position = Vector2(63, 551)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1637486579]
-position = Vector2(415, 10)
-shape = SubResource("RectangleShape2D_10lgy")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
 position = Vector2(478, 561)
+tile_map_data = PackedByteArray("AAD8/wAAAAACAAAAAAD9/wAAAAACAAAAAAD+/wAAAAACAAAAAAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAADAAAAAAACAAAAAAD7/wAAAAACAAAAAAD7////AAABAAAAAAD7//7/AAABAAAAAAD7//3/AAABAAAAAAD7//z/AAABAAAAAAD7//v/AAABAAAAAAAEAPv/AAABAAAAAAAEAPz/AAABAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAEAAAAAAACAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_oor6l")
 
-[node name="Player" parent="." unique_id=1631301973 instance=ExtResource("1_uiqps")]
-position = Vector2(81.79839, 487.97534)
+[node name="Player" parent="." unique_id=1631301973 groups=["Player"] instance=ExtResource("1_uiqps")]
+position = Vector2(132, 538)
+
+[node name="Guard" parent="." unique_id=308272451 instance=ExtResource("2_10lgy")]
+position = Vector2(838, 526)
+scale = Vector2(-1, 1)
+SPEED = 200.0
+JUMP_VELOCITY = -400.0
