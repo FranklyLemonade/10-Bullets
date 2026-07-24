@@ -19,7 +19,7 @@ unique_name_in_owner = true
 [node name="Viewbox" type="Area2D" parent="." unique_id=1051716623]
 
 [node name="Viewbox_hb" type="CollisionPolygon2D" parent="Viewbox" unique_id=864208269]
-polygon = PackedVector2Array(0, -20, 217, 82, 217, -126)
+polygon = PackedVector2Array(0, -20, -198, 70, -198, -114)
 
 [connection signal="body_entered" from="Viewbox" to="." method="_on_viewbox_body_entered"]
 [connection signal="body_exited" from="Viewbox" to="." method="_on_viewbox_body_exited"]

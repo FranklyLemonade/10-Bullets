@@ -15,25 +15,26 @@ var post: Vector2
 func _ready() -> void:
 	post = position
 	animator.play("idle")
+	
+	animator.flip_h = false
 
 func _physics_process(delta: float) -> void:
 	# gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	
+
 	if player_detected and is_instance_valid(player):
 		act()
-		
 	else:
-		if abs(post.x - position.x) < 5:
+		var dist = post.x - position.x
+		if abs(dist) < 10:
 			velocity.x = 0
-			animator.play("idle")
-		elif post.x > position.x:
-			velocity.x = SPEED/2
-			animator.play("run")
-		elif post.x < position.x:
-			velocity.x = SPEED/2 * -1
-			animator.play("run")
+		else:
+			velocity.x = sign(dist) * SPEED / 2
+	if velocity.x <= 0:
+		scale.x = 1
+	elif velocity.x > 0:
+		scale.x = -1
 	
 	move_and_slide()
 
@@ -45,8 +46,10 @@ func act():
 	# move towards player or attack
 	if rel_player_pos.x > 50:
 		velocity.x = SPEED
+		# animator.play("run")
 	elif rel_player_pos.x < -50:
 		velocity.x = SPEED * -1
+		# animator.play("run")
 	else:
 		velocity.x = 0
 		if abs(rel_player_pos.y) <= 50:
@@ -68,13 +71,14 @@ func attack():
 func die():
 	queue_free()
 
-
 func _on_viewbox_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player_detected = true
 		player = body
+		print("player detected")
 
 func _on_viewbox_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		player_detected = false
 		player = null
+		print("player exited")

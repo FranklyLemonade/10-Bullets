@@ -1,7 +1,6 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cexdovcka1l0g"]
 
 [ext_resource type="Texture2D" uid="uid://b8psttti3acc0" path="res://Enemies/Guard/SpriteSheets/GuardIdle.png" id="1_c3arf"]
-[ext_resource type="Texture2D" uid="uid://wq08nlp6pj6a" path="res://Enemies/Guard/SpriteSheets/GuardPunch.png" id="2_8j00y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bijwb"]
 atlas = ExtResource("1_c3arf")
@@ -21,26 +20,6 @@ region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1htm"]
 atlas = ExtResource("1_c3arf")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q23do"]
-atlas = ExtResource("2_8j00y")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1t4qc"]
-atlas = ExtResource("2_8j00y")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n27c4"]
-atlas = ExtResource("2_8j00y")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u1ci7"]
-atlas = ExtResource("2_8j00y")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8g3od"]
-atlas = ExtResource("2_8j00y")
 region = Rect2(256, 0, 64, 64)
 
 [resource]
@@ -65,23 +44,8 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q23do")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1t4qc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n27c4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u1ci7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8g3od")
-}],
-"loop": false,
+"frames": [],
+"loop": true,
 "name": &"punch",
 "speed": 5.0
 }]

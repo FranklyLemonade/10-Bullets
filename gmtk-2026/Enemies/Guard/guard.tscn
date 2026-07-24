@@ -8,7 +8,6 @@
 [node name="Hitbox" parent="." index="0" unique_id=2019124772]
 position = Vector2(1, 0)
 
-[node name="Sprite" parent="." index="1" unique_id=633141681]
+[node name="Animator" parent="." index="1" unique_id=633141681]
 sprite_frames = ExtResource("2_lm52d")
 animation = &"idle"
-flip_h = true

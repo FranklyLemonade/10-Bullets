@@ -32,7 +32,4 @@ tile_set = SubResource("TileSet_oor6l")
 position = Vector2(132, 538)
 
 [node name="Guard" parent="." unique_id=308272451 instance=ExtResource("2_10lgy")]
-position = Vector2(838, 526)
-scale = Vector2(-1, 1)
-SPEED = 200.0
-JUMP_VELOCITY = -400.0
+position = Vector2(765, 490)
