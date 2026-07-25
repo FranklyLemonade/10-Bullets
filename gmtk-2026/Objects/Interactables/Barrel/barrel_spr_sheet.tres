@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://mtyo34edwph8" path="res://Objects/Interactables/Barrel/barrel_spr.png" id="1_5egxe"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5egxe"]
+atlas = ExtResource("1_5egxe")
+region = Rect2(32, 8, 96, 96)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ymvm4"]
 atlas = ExtResource("1_5egxe")
 region = Rect2(416, 8, 96, 96)
@@ -21,18 +25,21 @@ region = Rect2(32, 8, 96, 96)
 [resource]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_5egxe")
+}, {
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_ymvm4")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_f03ce")
 }, {
-"duration": 1.0,
+"duration": 0.9,
 "texture": SubResource("AtlasTexture_ed8jo")
 }],
-"loop": true,
+"loop": false,
 "name": &"burn",
-"speed": 2.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,

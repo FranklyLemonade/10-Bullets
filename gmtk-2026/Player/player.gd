@@ -6,7 +6,7 @@ const BULLET_SCENE = preload("res://Objects/Bullet/bullet.tscn")
 
 var facing = 1
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
 const PUSH_FORCE = 50.0
 
 signal bullet_used

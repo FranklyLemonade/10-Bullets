@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d1bucgmmshjx6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrnyq"]
+
+[node name="CrackedWall" type="StaticBody2D" unique_id=43356423]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=693866110]
+shape = SubResource("RectangleShape2D_xrnyq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=741585652]
