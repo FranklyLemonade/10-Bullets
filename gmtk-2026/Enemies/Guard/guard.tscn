@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cyl076q2w24v4"]
+
+[ext_resource type="PackedScene" uid="uid://cexf604yp2m18" path="res://Enemies/enemy_parent.tscn" id="1_opr0s"]
+[ext_resource type="SpriteFrames" uid="uid://cexdovcka1l0g" path="res://Enemies/Guard/guard_sprites.tres" id="2_lm52d"]
+
+[node name="Guard" unique_id=308272451 instance=ExtResource("1_opr0s")]
+
+[node name="Hitbox" parent="." index="0" unique_id=2019124772]
+position = Vector2(1, 0)
+
+[node name="Animator" parent="." index="1" unique_id=633141681]
+sprite_frames = ExtResource("2_lm52d")
+animation = &"run"
+frame_progress = 0.41106287

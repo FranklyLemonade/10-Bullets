@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c58pmn88wggi2"]
+
+[ext_resource type="Script" uid="uid://b7rnenoqd2rng" path="res://Objects/Interactables/Barrel/barrel.gd" id="1_cq85j"]
+[ext_resource type="SpriteFrames" uid="uid://c1vogqmv6rlbk" path="res://Objects/Interactables/Barrel/barrel_spr_sheet.tres" id="2_3jeln"]
+
+[node name="Barrel" type="RigidBody2D" unique_id=374753265 groups=["Breakables"]]
+script = ExtResource("1_cq85j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=11882305]
+sprite_frames = ExtResource("2_3jeln")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1753512147]
+polygon = PackedVector2Array(-48, 24, -24, 48, 24, 48, 48, 24, 48, -24, 24, -48, -24, -48, -48, -24)

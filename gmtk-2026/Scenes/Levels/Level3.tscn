@@ -1,0 +1,32 @@
+[gd_scene format=4 uid="uid://b3uysejtj6t10"]
+
+[ext_resource type="PackedScene" uid="uid://cbtt0oh6e1uw2" path="res://Scenes/Levels/Level0.tscn" id="1_y6rnf"]
+[ext_resource type="PackedScene" uid="uid://d1bucgmmshjx6" path="res://Objects/Interactables/Cracked Wall/cracked_wall.tscn" id="2_c01y6"]
+[ext_resource type="PackedScene" uid="uid://uc4nia4x5ws5" path="res://Objects/Interactables/Box/box.tscn" id="3_3gtua"]
+[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="4_c01y6"]
+
+[node name="Node2D" unique_id=2113682009 instance=ExtResource("1_y6rnf")]
+
+[node name="Sprite2D" parent="ParallaxBackground/ParallaxLayer" parent_id_path=PackedInt32Array(1888711680) index="0" unique_id=1787388283]
+position = Vector2(-2, 1)
+
+[node name="TileMapLayer" parent="." index="1" unique_id=501854871]
+tile_map_data = PackedByteArray("AAD7/wIAAAACAAAAAAD8/wIAAAACAAAAAAD9/wIAAAACAAAAAAD+/wIAAAACAAAAAAD//wIAAAACAAAAAAAAAAIAAAACAAAAAAD7////AAAAAAAAAAD8////AAAAAAAAAAD9////AAAAAAAAAAD7/wMAAAABAAAAAAD8/wMAAAABAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD//wMAAAABAAAAAAAAAAMAAAABAAAAAAABAAMAAAABAAAAAAABAAIAAAABAAAAAAABAAEAAAABAAAAAAABAAAAAAACAAAAAAACAAMAAAABAAAAAAADAAMAAAABAAAAAAAEAAMAAAABAAAAAAAEAAIAAAABAAAAAAAEAAEAAAABAAAAAAAEAAAAAAACAAAAAAAEAP//AAABAAAAAAAEAP7/AAABAAAAAAAEAP3/AAAAAAAAAAAEAPz/AAABAAAAAAAEAPv/AAABAAAAAAAEAPr/AAABAAAAAAADAPr/AAABAAAAAAADAPv/AAABAAAAAAADAPz/AAABAAAAAAADAP3/AAAAAAAAAAADAAAAAAACAAAAAAADAAEAAAABAAAAAAADAAIAAAABAAAAAAACAAIAAAABAAAAAAACAAEAAAABAAAAAAACAAAAAAACAAAAAAACAP3/AAAAAAAAAAACAPz/AAABAAAAAAACAPv/AAABAAAAAAACAPr/AAABAAAAAAABAPr/AAABAAAAAAAAAPr/AAABAAAAAAD///r/AAABAAAAAAD+//r/AAABAAAAAAD9//r/AAABAAAAAAD8//r/AAABAAAAAAD7//r/AAABAAAAAAD7//v/AAABAAAAAAD7//z/AAABAAAAAAD7//3/AAABAAAAAAD7//7/AAABAAAAAAD8//7/AAABAAAAAAD8//3/AAABAAAAAAD8//z/AAABAAAAAAD8//v/AAABAAAAAAD9//v/AAABAAAAAAD+//v/AAABAAAAAAD9//z/AAABAAAAAAD9//3/AAABAAAAAAD9//7/AAABAAAAAAD+//7/AAAAAAAAAAD+//3/AAABAAAAAAD+//z/AAABAAAAAAD///v/AAABAAAAAAD///z/AAABAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAABAAAAAAAAAPv/AAABAAAAAAABAPv/AAABAAAAAAABAPz/AAABAAAAAAABAP3/AAAAAAAAAAD6/wAAAAABAAAAAAD6/wEAAAABAAAAAAD6////AAABAAAAAAD6/wIAAAABAAAAAAD9/wAAAAAAAAAAAAAFAP3/AAABAAAAAAAFAP7/AAABAAAAAAAFAAAAAAABAAAAAAAFAP//AAABAAAAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1631301973]
+position = Vector2(40, 723)
+
+[node name="Boss" parent="." index="4" unique_id=308272451]
+position = Vector2(814, 529)
+
+[node name="CrackedWall" parent="." index="5" unique_id=43356423 instance=ExtResource("2_c01y6")]
+position = Vector2(238, 705)
+
+[node name="Box" parent="." index="6" unique_id=329239634 instance=ExtResource("3_3gtua")]
+position = Vector2(421, 705)
+
+[node name="Guard2" parent="." index="7" unique_id=1335237851 instance=ExtResource("4_c01y6")]
+position = Vector2(717, 528)
+
+[node name="Guard" parent="." index="8" unique_id=142928217 instance=ExtResource("4_c01y6")]
+position = Vector2(543, 720)

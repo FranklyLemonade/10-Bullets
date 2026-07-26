@@ -1,0 +1,52 @@
+[gd_scene format=4 uid="uid://43vmxpybrcb5"]
+
+[ext_resource type="PackedScene" uid="uid://cbtt0oh6e1uw2" path="res://Scenes/Levels/Level0.tscn" id="1_irt0h"]
+[ext_resource type="PackedScene" uid="uid://xyxfkw67ninf" path="res://Objects/Interactables/Lever/lever.tscn" id="2_v6v34"]
+[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="3_vigkb"]
+[ext_resource type="PackedScene" uid="uid://okmx5vkq7rx6" path="res://Objects/Platform/platform.tscn" id="4_v6v34"]
+
+[node name="Node2D" unique_id=2113682009 instance=ExtResource("1_irt0h")]
+
+[node name="TileMapLayer" parent="." index="1" unique_id=501854871]
+tile_map_data = PackedByteArray("AAD9/wIAAAACAAAAAAD+/wIAAAABAAAAAAAAAAEAAAACAAAAAAD7/wMAAAACAAAAAAD8/wMAAAACAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD//wMAAAACAAAAAAAAAAMAAAACAAAAAAABAAMAAAACAAAAAAACAAMAAAACAAAAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAAAEAAIAAAABAAAAAAAEAAEAAAABAAAAAAAEAAAAAAABAAAAAAAEAP7/AAABAAAAAAAEAP3/AAABAAAAAAAEAPz/AAABAAAAAAAEAPv/AAABAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAD7//z/AAACAAAAAAD6/wAAAAABAAAAAAD6/wEAAAABAAAAAAD6////AAACAAAAAAD6/wIAAAABAAAAAAD6//v/AAABAAAAAAD6//z/AAABAAAAAAD6//3/AAABAAAAAAD6//7/AAABAAAAAAD+/wEAAAACAAAAAAD6/wMAAAACAAAAAAD6//r/AAAAAAAAAAD+////AAACAAAAAAD/////AAACAAAAAAAAAP//AAACAAAAAAABAP//AAACAAAAAAACAP//AAACAAAAAAADAP//AAACAAAAAAAEAP//AAACAAAAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1631301973]
+position = Vector2(20, 819)
+
+[node name="Boss" parent="." index="4" unique_id=308272451]
+position = Vector2(42, 147)
+rotation = -3.139315
+
+[node name="Lever1" parent="." index="5" unique_id=1529878657 node_paths=PackedStringArray("platform") instance=ExtResource("2_v6v34")]
+position = Vector2(815, 801)
+platform = NodePath("../Platform1")
+
+[node name="Guard" parent="." index="6" unique_id=1240623400 instance=ExtResource("3_vigkb")]
+position = Vector2(260, 720)
+
+[node name="Guard2" parent="." index="7" unique_id=1520716171 instance=ExtResource("3_vigkb")]
+position = Vector2(524, 816)
+
+[node name="Platform1" parent="." index="8" unique_id=572255070 instance=ExtResource("4_v6v34")]
+position = Vector2(718, 843)
+move_offset = Vector2(-672, -288)
+
+[node name="Guard3" parent="." index="9" unique_id=1328696022 instance=ExtResource("3_vigkb")]
+position = Vector2(340, 624)
+
+[node name="Platform2" parent="." index="10" unique_id=868181243 instance=ExtResource("4_v6v34")]
+position = Vector2(813, 459)
+move_offset = Vector2(-672, -288)
+
+[node name="Lever2" parent="." index="11" unique_id=1690696701 node_paths=PackedStringArray("platform") instance=ExtResource("2_v6v34")]
+position = Vector2(717, 418)
+platform = NodePath("../Platform2")
+
+[node name="Guard4" parent="." index="12" unique_id=694608888 instance=ExtResource("3_vigkb")]
+position = Vector2(442, 432)
+
+[node name="Guard6" parent="." index="13" unique_id=2046014713 instance=ExtResource("3_vigkb")]
+position = Vector2(542, 432)
+
+[node name="Guard7" parent="." index="14" unique_id=97791939 instance=ExtResource("3_vigkb")]
+position = Vector2(634, 432)

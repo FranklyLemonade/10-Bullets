@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://dtnayg6pi27yt"]
+
+[ext_resource type="Texture2D" uid="uid://i661uqcsysmm" path="res://Backgrounds/StartMenu.png" id="1_fbbup"]
+[ext_resource type="Script" uid="uid://cyfs1c14iqq67" path="res://Scenes/Menus/level_menu.gd" id="1_keh06"]
+[ext_resource type="Texture2D" uid="uid://b4o40dlwoe1ie" path="res://Backgrounds/level_button.png" id="3_b3ixn"]
+
+[node name="LevelMenu" type="Control" unique_id=1982600097]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_keh06")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=442081349]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_fbbup")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect" unique_id=101794671]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 423.0
+offset_right = 610.0
+offset_bottom = 458.0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Level0" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1178167287]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level0" unique_id=832165905]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "1"
+horizontal_alignment = 1
+
+[node name="Level1" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1286433442]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level1" unique_id=2130491382]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "2"
+horizontal_alignment = 1
+
+[node name="Level2" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=590508661]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level2" unique_id=167894781]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "3"
+horizontal_alignment = 1
+
+[node name="Level3" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1345164243]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level3" unique_id=949190891]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "4"
+horizontal_alignment = 1
+
+[node name="Level4" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1064858944]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level4" unique_id=929875558]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "5"
+horizontal_alignment = 1
+
+[node name="Level5" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=763413078]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level5" unique_id=21416920]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "6"
+horizontal_alignment = 1
+
+[node name="Level6" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=772292886]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level6" unique_id=1066160249]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "7"
+horizontal_alignment = 1
+
+[node name="Level7" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=797627980]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level7" unique_id=2084462727]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "8"
+horizontal_alignment = 1
+
+[node name="Level8" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1044939437]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level8" unique_id=1981046186]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 36.0
+offset_bottom = 39.0
+text = "9"
+horizontal_alignment = 1
+
+[node name="Level9" type="TextureButton" parent="TextureRect/HBoxContainer" unique_id=1893772779]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = ExtResource("3_b3ixn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureRect/HBoxContainer/Level9" unique_id=513247966]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 35.0
+offset_bottom = 39.0
+text = "10"
+horizontal_alignment = 1

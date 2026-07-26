@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cexdovcka1l0g"]
+
+[ext_resource type="Texture2D" uid="uid://b8psttti3acc0" path="res://Enemies/Guard/SpriteSheets/GuardIdle.png" id="1_c3arf"]
+[ext_resource type="Texture2D" uid="uid://cpdwndrqgivg8" path="res://Enemies/Guard/SpriteSheets/guard_run.png" id="2_c3arf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bijwb"]
+atlas = ExtResource("1_c3arf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3arf"]
+atlas = ExtResource("1_c3arf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8j00y"]
+atlas = ExtResource("1_c3arf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e8mm"]
+atlas = ExtResource("1_c3arf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1htm"]
+atlas = ExtResource("1_c3arf")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q23do"]
+atlas = ExtResource("2_c3arf")
+region = Rect2(73, 2, 56, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t4qc"]
+atlas = ExtResource("2_c3arf")
+region = Rect2(130, 2, 56, 62)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bijwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3arf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8j00y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5e8mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1htm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_q23do")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_1t4qc")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_q23do")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_1t4qc")
+}],
+"loop": false,
+"name": &"run",
+"speed": 9.0
+}]

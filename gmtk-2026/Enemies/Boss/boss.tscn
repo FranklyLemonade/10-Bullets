@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ds2uu8ysa26f"]
+
+[ext_resource type="PackedScene" uid="uid://cexf604yp2m18" path="res://Enemies/enemy_parent.tscn" id="1_itqpf"]
+[ext_resource type="Script" uid="uid://c658n6u35rsg" path="res://Enemies/Boss/boss.gd" id="2_1brnh"]
+[ext_resource type="SpriteFrames" uid="uid://dw8kdveqxyp76" path="res://Enemies/Boss/boss_spr_sheet.tres" id="3_n3cb2"]
+
+[node name="Boss" unique_id=308272451 groups=["Boss"] instance=ExtResource("1_itqpf")]
+script = ExtResource("2_1brnh")
+
+[node name="Animator" parent="." index="1" unique_id=633141681]
+sprite_frames = ExtResource("3_n3cb2")
+animation = &"idle"

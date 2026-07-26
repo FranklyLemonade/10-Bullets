@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bwnhcmb8bpulx"]
+
+[ext_resource type="Texture2D" uid="uid://dcicxpb7k6wic" path="res://Objects/Interactables/Lever/lever_spr.png" id="1_4mv4i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_850b3"]
+atlas = ExtResource("1_4mv4i")
+region = Rect2(8, 16, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utvu8"]
+atlas = ExtResource("1_4mv4i")
+region = Rect2(128, 16, 96, 96)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_850b3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utvu8")
+}],
+"loop": true,
+"name": &"flicked",
+"speed": 5.0
+}]
