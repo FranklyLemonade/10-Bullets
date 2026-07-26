@@ -20,7 +20,16 @@ func screen_exited() -> void:
 	queue_free()
 
 
+
 func _on_body_entered(body: Node2D) -> void:
+	handle_hit(body)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	handle_hit(area)
+
+
+func handle_hit(body):
 	if body.is_in_group("Enemies"):
 		body.die()
 		queue_free()

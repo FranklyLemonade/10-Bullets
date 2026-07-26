@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://d1bucgmmshjx6"]
 
 [ext_resource type="Script" uid="uid://dwvp6ayb7xkm8" path="res://Objects/Interactables/Cracked Wall/cracked_wall.gd" id="1_hviqe"]
+[ext_resource type="SpriteFrames" uid="uid://c2kuo2fd6iae0" path="res://Objects/Interactables/Cracked Wall/cracked_wall_spr_sheet.tres" id="2_htot2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrnyq"]
+size = Vector2(96, 96)
 
 [node name="CrackedWall" type="StaticBody2D" unique_id=43356423 groups=["Breakables"]]
 script = ExtResource("1_hviqe")
@@ -11,3 +13,5 @@ script = ExtResource("1_hviqe")
 shape = SubResource("RectangleShape2D_xrnyq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=741585652]
+sprite_frames = ExtResource("2_htot2")
+animation = &"break"

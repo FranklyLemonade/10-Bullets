@@ -1,9 +1,18 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://cjw48abiawmb1"]
 
+[ext_resource type="Texture2D" uid="uid://cehubmldentc4" path="res://Objects/Interactables/Box/broken_box.png" id="1_bwav1"]
 [ext_resource type="Texture2D" uid="uid://g6rsjjqxijn1" path="res://Objects/Interactables/Box/box_spr.png" id="1_d11yj"]
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bwav1")
+}],
+"loop": true,
+"name": &"break",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_d11yj")

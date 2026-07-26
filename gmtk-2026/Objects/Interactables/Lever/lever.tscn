@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://xyxfkw67ninf"]
 
 [ext_resource type="Script" uid="uid://b3dclpihgnpsp" path="res://Objects/Interactables/Lever/lever.gd" id="1_ankhp"]
+[ext_resource type="SpriteFrames" uid="uid://bwnhcmb8bpulx" path="res://Objects/Interactables/Lever/lever_spr_sheet.tres" id="2_nhwb5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkmb2"]
+size = Vector2(94, 96)
 
 [node name="Lever" type="Area2D" unique_id=1529878657 groups=["Breakables"]]
 script = ExtResource("1_ankhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1875707518]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_wkmb2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1347494255]
+sprite_frames = ExtResource("2_nhwb5")

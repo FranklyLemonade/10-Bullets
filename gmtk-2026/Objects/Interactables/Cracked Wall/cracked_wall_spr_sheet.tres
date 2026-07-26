@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c2kuo2fd6iae0"]
+
+[ext_resource type="Texture2D" uid="uid://dfa785adbi8yx" path="res://Objects/Interactables/Cracked Wall/cracked_wall.png" id="1_b8vix"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee63s"]
+atlas = ExtResource("1_b8vix")
+region = Rect2(408, 16, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwqv3"]
+atlas = ExtResource("1_b8vix")
+region = Rect2(792, 16, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfunk"]
+atlas = ExtResource("1_b8vix")
+region = Rect2(24, 16, 96, 96)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee63s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwqv3")
+}],
+"loop": false,
+"name": &"break",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfunk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

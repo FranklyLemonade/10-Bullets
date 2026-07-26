@@ -3,7 +3,7 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$AnimatedSprite2D.play("default")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -11,4 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _break():
-	queue_free()
+	$AnimatedSprite2D.play("break")
+	$CollisionShape2D.set_deferred("disabled", true)
+	gravity_scale = 0.0

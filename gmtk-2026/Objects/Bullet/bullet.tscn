@@ -19,5 +19,6 @@ rect = Rect2(-11, -11, 22, 22)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_fybi8")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="screen_exited"]

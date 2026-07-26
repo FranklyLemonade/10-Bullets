@@ -5,7 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://kgntiwt2jai5" path="res://Tilesets/StructureTileset.png" id="3_jj04g"]
 [ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="4_8ni83"]
 [ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="6_3tymr"]
-[ext_resource type="PackedScene" uid="uid://c16643r6tc3lg" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff.tscn" id="6_es8ky"]
+[ext_resource type="PackedScene" uid="uid://xyxfkw67ninf" path="res://Objects/Interactables/Lever/lever.tscn" id="6_cpnto"]
+[ext_resource type="PackedScene" uid="uid://okmx5vkq7rx6" path="res://Objects/Platform/platform.tscn" id="7_w28ii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
 texture = ExtResource("3_jj04g")
@@ -43,10 +44,15 @@ tile_set = SubResource("TileSet_oor6l")
 
 [node name="Player" parent="." unique_id=1631301973 groups=["Player"] instance=ExtResource("4_8ni83")]
 unique_name_in_owner = true
-position = Vector2(134, 543)
+position = Vector2(135, 531)
 
 [node name="PlayerHud" parent="." unique_id=1014316994 instance=ExtResource("6_3tymr")]
 unique_name_in_owner = true
 
-[node name="CrackedCliff" parent="." unique_id=1421754492 instance=ExtResource("6_es8ky")]
-position = Vector2(438, 513)
+[node name="Lever" parent="." unique_id=1529878657 node_paths=PackedStringArray("platform") instance=ExtResource("6_cpnto")]
+position = Vector2(315, 549)
+platform = NodePath("../Platform")
+
+[node name="Platform" parent="." unique_id=572255070 instance=ExtResource("7_w28ii")]
+position = Vector2(417, 555)
+move_offset = Vector2(50, -300)
