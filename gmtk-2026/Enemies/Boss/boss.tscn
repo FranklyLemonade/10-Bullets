@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c658n6u35rsg" path="res://Enemies/Boss/boss.gd" id="2_1brnh"]
 [ext_resource type="SpriteFrames" uid="uid://dw8kdveqxyp76" path="res://Enemies/Boss/boss_spr_sheet.tres" id="3_n3cb2"]
 
-[node name="Boss" unique_id=308272451 instance=ExtResource("1_itqpf")]
+[node name="Boss" unique_id=308272451 groups=["Boss"] instance=ExtResource("1_itqpf")]
 script = ExtResource("2_1brnh")
 
 [node name="Animator" parent="." index="1" unique_id=633141681]

@@ -1,5 +1,7 @@
 extends Enemy
 
+signal killed
+
 func attack():
 	pass
 
@@ -8,4 +10,5 @@ func act():
 
 func die():
 	GameManager.level += 1
-	get_tree().change_scene_to_file("res://Scenes/Menus/LevelMenu.tscn")
+	emit_signal("killed")
+	queue_free()

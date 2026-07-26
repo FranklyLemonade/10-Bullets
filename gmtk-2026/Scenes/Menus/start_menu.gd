@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func start() -> void:
 	# change to level scene later
-	get_tree().change_scene_to_file("res://Scenes/Menus/LevelMenu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/Level0.tscn")

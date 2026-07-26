@@ -5,8 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://kgntiwt2jai5" path="res://Tilesets/StructureTileset.png" id="3_jj04g"]
 [ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="4_8ni83"]
 [ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="6_3tymr"]
-[ext_resource type="PackedScene" uid="uid://xyxfkw67ninf" path="res://Objects/Interactables/Lever/lever.tscn" id="6_cpnto"]
-[ext_resource type="PackedScene" uid="uid://okmx5vkq7rx6" path="res://Objects/Platform/platform.tscn" id="7_w28ii"]
+[ext_resource type="PackedScene" uid="uid://ds2uu8ysa26f" path="res://Enemies/Boss/boss.tscn" id="6_cpnto"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
 texture = ExtResource("3_jj04g")
@@ -33,26 +32,26 @@ script = ExtResource("1_w28ii")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1888711680]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1787388283]
+position = Vector2(-2, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("2_rbc30")
 centered = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=501854871]
 position = Vector2(478, 561)
-tile_map_data = PackedByteArray("AAD8/wAAAAACAAAAAAD9/wAAAAACAAAAAAD+/wAAAAACAAAAAAD//wAAAAACAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAADAAAAAAACAAAAAAD7/wAAAAACAAAAAAD7////AAABAAAAAAD7//7/AAABAAAAAAD7//3/AAABAAAAAAD7//z/AAABAAAAAAD7//v/AAABAAAAAAAEAPv/AAABAAAAAAAEAPz/AAABAAAAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAEAAAAAAACAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAAAAAAAAAD9//r/AAAAAAAAAAD8//r/AAAAAAAAAAD7//r/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD7/wIAAAACAAAAAAD8/wIAAAACAAAAAAD9/wIAAAACAAAAAAD+/wIAAAACAAAAAAD//wIAAAACAAAAAAAAAAIAAAACAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAAAAAD7////AAAAAAAAAAD8////AAAAAAAAAAD9////AAAAAAAAAAD+////AAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAD7/wMAAAABAAAAAAD8/wMAAAABAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD//wMAAAABAAAAAAAAAAMAAAABAAAAAAABAAMAAAABAAAAAAABAAIAAAABAAAAAAABAAEAAAABAAAAAAABAAAAAAABAAAAAAABAP//AAABAAAAAAACAAMAAAABAAAAAAADAAMAAAABAAAAAAAEAAMAAAABAAAAAAAEAAIAAAABAAAAAAAEAAEAAAABAAAAAAAEAAAAAAABAAAAAAAEAP//AAABAAAAAAAEAP7/AAABAAAAAAAEAP3/AAABAAAAAAAEAPz/AAABAAAAAAAEAPv/AAABAAAAAAAEAPr/AAABAAAAAAADAPr/AAABAAAAAAADAPv/AAABAAAAAAADAPz/AAABAAAAAAADAP3/AAABAAAAAAADAP7/AAABAAAAAAADAP//AAABAAAAAAADAAAAAAABAAAAAAADAAEAAAABAAAAAAADAAIAAAABAAAAAAACAAIAAAABAAAAAAACAAEAAAABAAAAAAACAAAAAAABAAAAAAACAP//AAABAAAAAAACAP7/AAABAAAAAAACAP3/AAABAAAAAAACAPz/AAABAAAAAAACAPv/AAABAAAAAAACAPr/AAABAAAAAAABAPr/AAABAAAAAAAAAPr/AAABAAAAAAD///r/AAABAAAAAAD+//r/AAABAAAAAAD9//r/AAABAAAAAAD8//r/AAABAAAAAAD7//r/AAABAAAAAAD7//v/AAABAAAAAAD7//z/AAABAAAAAAD7//3/AAABAAAAAAD7//7/AAABAAAAAAD8//7/AAABAAAAAAD8//3/AAABAAAAAAD8//z/AAABAAAAAAD8//v/AAABAAAAAAD9//v/AAABAAAAAAD+//v/AAABAAAAAAD9//z/AAABAAAAAAD9//3/AAABAAAAAAD9//7/AAABAAAAAAD+//7/AAABAAAAAAD+//3/AAABAAAAAAD+//z/AAABAAAAAAD///v/AAABAAAAAAD///z/AAABAAAAAAD///3/AAABAAAAAAAAAP3/AAABAAAAAAAAAP7/AAABAAAAAAD///7/AAABAAAAAAAAAPz/AAABAAAAAAAAAPv/AAABAAAAAAABAPv/AAABAAAAAAABAPz/AAABAAAAAAABAP3/AAABAAAAAAABAP7/AAABAAAAAAD6/wAAAAABAAAAAAD6/wEAAAABAAAAAAD6////AAABAAAAAAD6/wIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_oor6l")
 
 [node name="Player" parent="." unique_id=1631301973 groups=["Player"] instance=ExtResource("4_8ni83")]
 unique_name_in_owner = true
-position = Vector2(135, 531)
+position = Vector2(136, 723)
 
 [node name="PlayerHud" parent="." unique_id=1014316994 instance=ExtResource("6_3tymr")]
 unique_name_in_owner = true
 
-[node name="Lever" parent="." unique_id=1529878657 node_paths=PackedStringArray("platform") instance=ExtResource("6_cpnto")]
-position = Vector2(315, 549)
-platform = NodePath("../Platform")
+[node name="Boss" parent="." unique_id=308272451 instance=ExtResource("6_cpnto")]
+position = Vector2(429, 721)
 
-[node name="Platform" parent="." unique_id=572255070 instance=ExtResource("7_w28ii")]
-position = Vector2(417, 555)
-move_offset = Vector2(50, -300)
+[connection signal="killed" from="Player" to="PlayerHud" method="_on_player_killed"]
+[connection signal="used_bullets" from="Player" to="PlayerHud" method="_on_player_used_bullets"]
+[connection signal="killed" from="Boss" to="PlayerHud" method="_on_boss_killed"]

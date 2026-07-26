@@ -1,0 +1,73 @@
+[gd_scene format=4 uid="uid://bxqvt6qyqw4ph"]
+
+[ext_resource type="PackedScene" uid="uid://cbtt0oh6e1uw2" path="res://Scenes/Levels/Level0.tscn" id="1_e6fi7"]
+[ext_resource type="PackedScene" uid="uid://d1bucgmmshjx6" path="res://Objects/Interactables/Cracked Wall/cracked_wall.tscn" id="2_fkr78"]
+[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="4_5yvxo"]
+[ext_resource type="PackedScene" uid="uid://xyxfkw67ninf" path="res://Objects/Interactables/Lever/lever.tscn" id="5_el1rd"]
+[ext_resource type="PackedScene" uid="uid://okmx5vkq7rx6" path="res://Objects/Platform/platform.tscn" id="6_bks1i"]
+[ext_resource type="PackedScene" uid="uid://c58pmn88wggi2" path="res://Objects/Interactables/Barrel/barrel.tscn" id="7_8nne8"]
+[ext_resource type="PackedScene" uid="uid://c16643r6tc3lg" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff.tscn" id="8_71jdt"]
+
+[node name="Node2D" unique_id=2113682009 instance=ExtResource("1_e6fi7")]
+
+[node name="TileMapLayer" parent="." index="1" unique_id=501854871]
+tile_map_data = PackedByteArray("AAD7/wMAAAACAAAAAAD8/wMAAAACAAAAAAD9/wMAAAACAAAAAAD//wMAAAACAAAAAAAAAAMAAAACAAAAAAABAAMAAAACAAAAAAADAAMAAAACAAAAAAAEAAMAAAABAAAAAAAEAAIAAAABAAAAAAAEAAAAAAABAAAAAAAEAP//AAABAAAAAAAEAP7/AAABAAAAAAAEAPz/AAABAAAAAAAEAPv/AAABAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD6/wAAAAABAAAAAAD6/wEAAAACAAAAAAD6////AAABAAAAAAD6/wIAAAABAAAAAAD7//r/AAAAAAAAAAD8//r/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD///r/AAAAAAAAAAD+/wMAAAACAAAAAAD6//v/AAABAAAAAAD6//z/AAABAAAAAAD6//3/AAACAAAAAAD6//7/AAABAAAAAAD6//r/AAAAAAAAAAD6/wMAAAACAAAAAAD7/wEAAAACAAAAAAD8/wEAAAACAAAAAAD9/wEAAAACAAAAAAD+/wEAAAACAAAAAAD//wEAAAACAAAAAAAAAAEAAAACAAAAAAABAAEAAAACAAAAAAACAAAAAAABAAAAAAACAP//AAACAAAAAAACAP7/AAABAAAAAAACAP3/AAACAAAAAAABAP3/AAACAAAAAAAAAP3/AAACAAAAAAD///3/AAACAAAAAAD+//3/AAACAAAAAAD9//3/AAACAAAAAAD9////AAABAAAAAAAEAAEAAAABAAAAAAAEAP3/AAACAAAAAAACAAQAAAABAAAAAAD8////AAABAAAAAAD8//3/AAACAAAAAAABAP//AAACAAAAAAACAAMAAAACAAAAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1631301973]
+position = Vector2(45, 819)
+
+[node name="Boss" parent="." index="4" unique_id=308272451]
+position = Vector2(522, 433)
+
+[node name="CrackedWall" parent="." index="5" unique_id=43356423 instance=ExtResource("2_fkr78")]
+position = Vector2(238, 801)
+
+[node name="CrackedWall2" parent="." index="6" unique_id=660853230 instance=ExtResource("2_fkr78")]
+position = Vector2(238, 417)
+
+[node name="Guard3" parent="." index="7" unique_id=307585395 instance=ExtResource("4_5yvxo")]
+position = Vector2(480, 816)
+
+[node name="Guard2" parent="." index="8" unique_id=476074103 instance=ExtResource("4_5yvxo")]
+position = Vector2(384, 816)
+
+[node name="Guard" parent="." index="9" unique_id=394132535 instance=ExtResource("4_5yvxo")]
+position = Vector2(140, 624)
+
+[node name="Guard4" parent="." index="10" unique_id=188609868 instance=ExtResource("4_5yvxo")]
+position = Vector2(237, 624)
+
+[node name="Lever1" parent="." index="11" unique_id=1529878657 node_paths=PackedStringArray("platform") instance=ExtResource("5_el1rd")]
+position = Vector2(717, 705.00006)
+rotation = 1.5739248
+platform = NodePath("../Platform1")
+
+[node name="Platform1" parent="." index="12" unique_id=572255070 instance=ExtResource("6_bks1i")]
+position = Vector2(813, 843)
+move_offset = Vector2(0, -576)
+
+[node name="Platform2" parent="." index="13" unique_id=890540570 instance=ExtResource("6_bks1i")]
+position = Vector2(46, 267)
+move_offset = Vector2(0, 384)
+
+[node name="Lever2" parent="." index="14" unique_id=220734191 node_paths=PackedStringArray("platform") instance=ExtResource("5_el1rd")]
+position = Vector2(143, 226)
+platform = NodePath("../Platform2")
+
+[node name="Guard5" parent="." index="15" unique_id=605215092 instance=ExtResource("4_5yvxo")]
+position = Vector2(236, 240)
+
+[node name="Guard6" parent="." index="16" unique_id=1926794243 instance=ExtResource("4_5yvxo")]
+position = Vector2(278, 240)
+
+[node name="Barrel" parent="." index="17" unique_id=374753265 instance=ExtResource("7_8nne8")]
+position = Vector2(381, 225)
+
+[node name="CrackedWall3" parent="." index="18" unique_id=435977495 instance=ExtResource("2_fkr78")]
+position = Vector2(621.8765, 224.87227)
+
+[node name="CrackedWall4" parent="." index="19" unique_id=461402161 instance=ExtResource("2_fkr78")]
+position = Vector2(622, 128)
+
+[node name="CrackedCliff" parent="." index="20" unique_id=1421754492 instance=ExtResource("8_71jdt")]
+position = Vector2(526, 513)

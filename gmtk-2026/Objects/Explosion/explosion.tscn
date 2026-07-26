@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://b2exkob038ko2" path="res://Objects/Explosion/explosion_spr_sheet.tres" id="2_mxxmh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hyod8"]
-radius = 159.0786
+radius = 102.0049
 
 [node name="Explosion" type="Area2D" unique_id=582861519]
 script = ExtResource("1_1ylfm")
@@ -14,5 +14,8 @@ shape = SubResource("CircleShape2D_hyod8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=959502085]
 position = Vector2(1.7166138e-05, 1.9073486e-06)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_mxxmh")
+animation = &"explode"
+frame = 4
+frame_progress = 0.6841124

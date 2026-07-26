@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr0d68jid253d"
-path="res://.godot/imported/lever_flicked.png-641716ce4d5afcdce2884e68625642bb.ctex"
+uid="uid://cpdwndrqgivg8"
+path="res://.godot/imported/guard_run.png-2208c28927ad5d94b63e43cec0fcfaef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Interactables/Lever/lever_flicked.png"
-dest_files=["res://.godot/imported/lever_flicked.png-641716ce4d5afcdce2884e68625642bb.ctex"]
+source_file="res://Enemies/Guard/SpriteSheets/guard_run.png"
+dest_files=["res://.godot/imported/guard_run.png-2208c28927ad5d94b63e43cec0fcfaef.ctex"]
 
 [params]
 

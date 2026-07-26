@@ -46,10 +46,10 @@ func act():
 	# move towards player or attack
 	if rel_player_pos.x > 50:
 		velocity.x = SPEED
-		# animator.play("run")
+		animator.play("run")
 	elif rel_player_pos.x < -50:
 		velocity.x = SPEED * -1
-		# animator.play("run")
+		animator.play("run")
 	else:
 		velocity.x = 0
 		if abs(rel_player_pos.y) <= 50:

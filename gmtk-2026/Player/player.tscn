@@ -16,15 +16,15 @@ shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1995445863]
 sprite_frames = ExtResource("2_btcbx")
-animation = &"jump"
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1088197784]
 zoom = Vector2(2, 2)
 process_callback = 0
 limit_left = 0
 limit_top = 0
-limit_right = 1152
-limit_bottom = 648
+limit_right = 924
+limit_bottom = 924
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 drag_horizontal_enabled = true

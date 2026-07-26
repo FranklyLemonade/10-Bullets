@@ -1,0 +1,55 @@
+[gd_scene format=4 uid="uid://dvmjx2nw2gf16"]
+
+[ext_resource type="PackedScene" uid="uid://cbtt0oh6e1uw2" path="res://Scenes/Levels/Level0.tscn" id="1_3be8h"]
+[ext_resource type="PackedScene" uid="uid://okmx5vkq7rx6" path="res://Objects/Platform/platform.tscn" id="2_stxpj"]
+[ext_resource type="PackedScene" uid="uid://xyxfkw67ninf" path="res://Objects/Interactables/Lever/lever.tscn" id="3_6lk1x"]
+[ext_resource type="PackedScene" uid="uid://cyl076q2w24v4" path="res://Enemies/Guard/guard.tscn" id="4_tcs12"]
+[ext_resource type="PackedScene" uid="uid://c16643r6tc3lg" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff.tscn" id="5_rxtma"]
+[ext_resource type="PackedScene" uid="uid://uc4nia4x5ws5" path="res://Objects/Interactables/Box/box.tscn" id="6_bgnfb"]
+[ext_resource type="PackedScene" uid="uid://c58pmn88wggi2" path="res://Objects/Interactables/Barrel/barrel.tscn" id="7_pomu1"]
+
+[node name="Node2D" unique_id=2113682009 instance=ExtResource("1_3be8h")]
+
+[node name="TileMapLayer" parent="." index="1" unique_id=501854871]
+tile_map_data = PackedByteArray("AAD7/wMAAAACAAAAAAD8/wMAAAACAAAAAAD9/wMAAAACAAAAAAD+/wMAAAACAAAAAAD//wMAAAACAAAAAAAAAAMAAAABAAAAAAABAAMAAAABAAAAAAACAAMAAAABAAAAAAADAAMAAAABAAAAAAAEAAMAAAABAAAAAAAEAAIAAAABAAAAAAAEAAEAAAABAAAAAAAEAAAAAAABAAAAAAAEAP//AAABAAAAAAAEAP7/AAABAAAAAAAEAP3/AAABAAAAAAAEAPz/AAABAAAAAAAEAPv/AAABAAAAAAAEAPr/AAAAAAAAAAADAPr/AAAAAAAAAAACAPr/AAAAAAAAAAABAPr/AAAAAAAAAAAAAPr/AAAAAAAAAAD///r/AAAAAAAAAAD+//r/AAABAAAAAAD9//r/AAABAAAAAAD8//r/AAABAAAAAAD7//r/AAABAAAAAAD6/wAAAAABAAAAAAD6/wEAAAABAAAAAAD6/wIAAAABAAAAAAD6//r/AAABAAAAAAD6//v/AAABAAAAAAD6//z/AAABAAAAAAD6//3/AAABAAAAAAD6/wMAAAACAAAAAAD+//v/AAAAAAAAAAD9//z/AAAAAAAAAAD8//3/AAAAAAAAAAD9//v/AAABAAAAAAD8//v/AAABAAAAAAD7//v/AAABAAAAAAD7//z/AAABAAAAAAD8//z/AAABAAAAAAD7//3/AAAAAAAAAAADAP//AAABAAAAAAABAAEAAAACAAAAAAAAAAIAAAACAAAAAAABAAIAAAABAAAAAAACAAIAAAABAAAAAAADAAIAAAABAAAAAAADAAEAAAABAAAAAAACAAEAAAABAAAAAAADAAAAAAABAAAAAAACAP//AAACAAAAAAACAAAAAAABAAAAAAADAP7/AAACAAAAAAD6//7/AAABAAAAAAD8////AAACAAAAAAD6////AAABAAAAAAA=")
+
+[node name="Player" parent="." index="2" unique_id=1631301973]
+position = Vector2(42, 819)
+
+[node name="Boss" parent="." index="4" unique_id=308272451]
+position = Vector2(812, 145)
+
+[node name="Platform1" parent="." index="5" unique_id=572255070 instance=ExtResource("2_stxpj")]
+position = Vector2(141, 843)
+move_offset = Vector2(288, -288)
+
+[node name="Lever1" parent="." index="6" unique_id=1529878657 node_paths=PackedStringArray("platform") instance=ExtResource("3_6lk1x")]
+position = Vector2(431, 802)
+platform = NodePath("../Platform1")
+
+[node name="Guard" parent="." index="7" unique_id=1631303093 instance=ExtResource("4_tcs12")]
+position = Vector2(329, 816)
+
+[node name="CrackedCliff" parent="." index="8" unique_id=1421754492 instance=ExtResource("5_rxtma")]
+position = Vector2(814, 225)
+
+[node name="Lever2" parent="." index="9" unique_id=611583913 node_paths=PackedStringArray("platform") instance=ExtResource("3_6lk1x")]
+position = Vector2(45.000008, 416.00003)
+rotation = -4.698598
+platform = NodePath("../Platform2")
+
+[node name="Platform2" parent="." index="10" unique_id=106574490 instance=ExtResource("2_stxpj")]
+position = Vector2(239, 554)
+move_offset = Vector2(192, -192)
+
+[node name="Box" parent="." index="11" unique_id=329239634 instance=ExtResource("6_bgnfb")]
+position = Vector2(622, 417)
+
+[node name="CrackedCliff2" parent="." index="12" unique_id=1328373314 instance=ExtResource("5_rxtma")]
+position = Vector2(622, 514)
+
+[node name="Barrel2" parent="." index="13" unique_id=1957268736 instance=ExtResource("7_pomu1")]
+position = Vector2(812, 321)
+
+[node name="Box2" parent="." index="14" unique_id=27305866 instance=ExtResource("6_bgnfb")]
+position = Vector2(142, 417)
