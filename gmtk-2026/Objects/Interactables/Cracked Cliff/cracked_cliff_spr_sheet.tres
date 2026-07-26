@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dmhktc5jkrcpx"]
+
+[ext_resource type="Texture2D" uid="uid://c0fbeelg6gefx" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff_spr.png" id="1_kge5j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kge5j"]
+atlas = ExtResource("1_kge5j")
+region = Rect2(400, 8, 96, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xem2"]
+atlas = ExtResource("1_kge5j")
+region = Rect2(784, 8, 96, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqjj2"]
+atlas = ExtResource("1_kge5j")
+region = Rect2(1168, 8, 96, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aayqb"]
+atlas = ExtResource("1_kge5j")
+region = Rect2(16, 8, 96, 97)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kge5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xem2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqjj2")
+}],
+"loop": false,
+"name": &"break",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aayqb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -5,8 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://kgntiwt2jai5" path="res://Tilesets/StructureTileset.png" id="3_jj04g"]
 [ext_resource type="PackedScene" uid="uid://cx5ghr7oecywv" path="res://Player/player.tscn" id="4_8ni83"]
 [ext_resource type="PackedScene" uid="uid://bb34dd8mluwxo" path="res://Player/HUD/PlayerHUD.tscn" id="6_3tymr"]
-[ext_resource type="PackedScene" uid="uid://ds2uu8ysa26f" path="res://Enemies/Boss/boss.tscn" id="6_cpnto"]
-[ext_resource type="PackedScene" uid="uid://c58pmn88wggi2" path="res://Objects/Interactables/Barrel/barrel.tscn" id="8_08jyo"]
+[ext_resource type="PackedScene" uid="uid://c16643r6tc3lg" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff.tscn" id="6_es8ky"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1i3bd"]
 texture = ExtResource("3_jj04g")
@@ -49,8 +48,5 @@ position = Vector2(134, 543)
 [node name="PlayerHud" parent="." unique_id=1014316994 instance=ExtResource("6_3tymr")]
 unique_name_in_owner = true
 
-[node name="Boss" parent="." unique_id=308272451 instance=ExtResource("6_cpnto")]
-position = Vector2(657, 524)
-
-[node name="Barrel" parent="." unique_id=374753265 instance=ExtResource("8_08jyo")]
-position = Vector2(473, 512)
+[node name="CrackedCliff" parent="." unique_id=1421754492 instance=ExtResource("6_es8ky")]
+position = Vector2(438, 513)

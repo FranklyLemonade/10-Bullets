@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://c16643r6tc3lg"]
 
 [ext_resource type="Script" uid="uid://c2ytbwdqbvrdq" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff.gd" id="1_glox0"]
+[ext_resource type="SpriteFrames" uid="uid://dmhktc5jkrcpx" path="res://Objects/Interactables/Cracked Cliff/cracked_cliff_spr_sheet.tres" id="2_k0hrs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0hrs"]
+size = Vector2(96, 96)
 
 [node name="CrackedCliff" type="StaticBody2D" unique_id=1421754492 groups=["Breakables"]]
 script = ExtResource("1_glox0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514380828]
+sprite_frames = ExtResource("2_k0hrs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144346117]
 shape = SubResource("RectangleShape2D_k0hrs")

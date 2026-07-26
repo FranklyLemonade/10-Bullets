@@ -3,19 +3,20 @@
 [ext_resource type="Script" uid="uid://oownsje07u4a" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="SpriteFrames" uid="uid://bpe1un0dku24x" path="res://Player/Sprites/player_sprites.tres" id="2_btcbx"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
-radius = 12.0
-height = 34.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
+size = Vector2(43, 56)
 
 [node name="Player" type="CharacterBody2D" unique_id=1631301973]
 script = ExtResource("1_4ntmi")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=585145427]
-shape = SubResource("CapsuleShape2D_gwnis")
+position = Vector2(3.5, 2)
+shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1995445863]
 sprite_frames = ExtResource("2_btcbx")
+animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1088197784]
 zoom = Vector2(2, 2)

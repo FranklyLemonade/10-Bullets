@@ -11,4 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _break():
+	$AnimatedSprite2D.play("break")
+	await $AnimatedSprite2D.animation_finished
 	queue_free()

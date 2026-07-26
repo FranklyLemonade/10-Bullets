@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bb34dd8mluwxo"]
 
 [ext_resource type="Script" uid="uid://vtelyfwrscuj" path="res://Player/HUD/player_hud.gd" id="1_v7kxa"]
-[ext_resource type="Texture2D" uid="uid://djfap12ymv3gt" path="res://Player/Sprites/bullet.png" id="1_y27wg"]
+[ext_resource type="Texture2D" uid="uid://djfap12ymv3gt" path="res://Objects/Bullet/bullet.png" id="1_y27wg"]
 
 [node name="PlayerHud" type="CanvasLayer" unique_id=1014316994]
 script = ExtResource("1_v7kxa")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3jlka6uvhgh3"
-path="res://.godot/imported/BulletTest.png.png-10309399015e3719f114df2d4f446509.ctex"
+uid="uid://tffececq1oet"
+path="res://.godot/imported/player_jump.png-1baa424b5b7db530b607702fcd50477b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Bullet/BulletTest.png.png"
-dest_files=["res://.godot/imported/BulletTest.png.png-10309399015e3719f114df2d4f446509.ctex"]
+source_file="res://Player/Sprites/player_jump.png"
+dest_files=["res://.godot/imported/player_jump.png-1baa424b5b7db530b607702fcd50477b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djfap12ymv3gt"
-path="res://.godot/imported/bullet.png-e7b44f49818ca90d0a51be3eb7675096.ctex"
+uid="uid://c0fbeelg6gefx"
+path="res://.godot/imported/cracked_cliff_spr.png-b6de4fbb0eed34bbad94fc003c5f93f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Sprites/bullet.png"
-dest_files=["res://.godot/imported/bullet.png-e7b44f49818ca90d0a51be3eb7675096.ctex"]
+source_file="res://Objects/Interactables/Cracked Cliff/cracked_cliff_spr.png"
+dest_files=["res://.godot/imported/cracked_cliff_spr.png-b6de4fbb0eed34bbad94fc003c5f93f0.ctex"]
 
 [params]
 

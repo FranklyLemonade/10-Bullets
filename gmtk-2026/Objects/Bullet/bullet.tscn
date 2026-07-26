@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c73csulji0ecj"]
 
 [ext_resource type="Script" uid="uid://b64r8r6uudy0y" path="res://Objects/Bullet/bullet.gd" id="1_qc4d1"]
-[ext_resource type="Texture2D" uid="uid://c3jlka6uvhgh3" path="res://Objects/Bullet/BulletTest.png.png" id="2_fybi8"]
+[ext_resource type="Texture2D" uid="uid://djfap12ymv3gt" path="res://Objects/Bullet/bullet.png" id="2_fybi8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_48nvk"]
-radius = 14.0
+radius = 11.0
 
 [node name="bullet" type="Area2D" unique_id=973571570]
 script = ExtResource("1_qc4d1")
@@ -13,10 +13,10 @@ script = ExtResource("1_qc4d1")
 shape = SubResource("CircleShape2D_48nvk")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=553857219]
-rect = Rect2(-16, -16, 32, 32)
+rect = Rect2(-11, -11, 22, 22)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=918203619]
-scale = Vector2(3, 3)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_fybi8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

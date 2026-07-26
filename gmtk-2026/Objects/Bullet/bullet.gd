@@ -1,11 +1,14 @@
 extends Area2D
 
 var direction
-var speed = 700
+var speed = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	speed *= direction
+	if direction < 0:
+		$Sprite2D.flip_h = true
+		position = position - Vector2(50, 0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
