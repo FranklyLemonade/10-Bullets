@@ -80,7 +80,7 @@ region = Rect2(0, 128, 64, 62)
 [resource]
 animations = [{
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"die",
 "speed": 5.0
 }, {
@@ -94,7 +94,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6g62t")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -111,7 +111,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kreqw")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump",
 "speed": 4.0
 }, {
@@ -128,7 +128,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ao2p1")
 }],
-"loop": false,
+"loop": 0,
 "name": &"run",
 "speed": 4.0
 }, {
@@ -154,7 +154,7 @@ animations = [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_b2s64")
 }],
-"loop": false,
+"loop": 0,
 "name": &"shoot",
 "speed": 13.0
 }]
